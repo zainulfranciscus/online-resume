@@ -19,9 +19,44 @@
 	<link rel="stylesheet" href="styles/typography.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="resume" ng-controller='SkillRatingCtrl'  class="open-sans-font black-font">
-
-	<div ng-view></div>
+  <body ng-app="resume" ng-controller='SkillRatingCtrl'  class="open-sans-font standard-font-size black-font">
+	<div class="contain-to-grid sticky top-bar-displayed-only-in-mobile">
+		
+			<nav class="top-bar" data-topbar data-options="scrolltop: false">
+			  <ul class="title-area">
+				<li class="name">			 
+				</li>
+				 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			  </ul>
+			  
+			  <section class="top-bar-section">
+				 <dl class="sub-nav">
+					<dd><a href="#profile" class="content-font" ng-click="scrollTo('a[name=\'profile\']')">Profile</a></dd>
+					<dd><a href="#personal-projects" class="content-font" ng-click="scrollTo('a[name=\'personal-projects\']')">Personal Projects</a></dd>
+					<dd><a href="#education" class="content-font" ng-click="scrollTo('a[name=\'education\']')">Education</a></dd>
+					<dd><a href="#career" class="content-font" ng-click="scrollTo('a[name=\'career\']')">Employment</a></dd>	
+					<dd><a href="#/about.html">About</a></dd>						
+				  </dl>
+			  </section>
+			</nav>
+		
+	</div>
+	
+	<div class="magellan-nav-bar" data-magellan-expedition="fixed">	 
+		  <dl class="sub-nav">
+			<dd data-magellan-arrival="profile"><a href="#profile" class="content-font">Profile</a></dd>
+			<dd data-magellan-arrival="personal-projects"><a href="#personal-projects" class="content-font">Personal Projects</a></dd>
+			<dd data-magellan-arrival="education"><a href="#education" class="content-font">Education</a></dd>
+			<dd data-magellan-arrival="career"><a href="#career" class="content-font">Employment</a></dd>		
+			<dd data-magellan-arrival="about"><a href="#/about.html" class="content-font">About</a></dd>
+		  </dl>	 
+	</div>
+	<section ng-include src="'views/name.html'"></section> 
+	<section ng-include src="'views/profile.html'"></section>  	
+	<section ng-include src="'views/personal-projects.html'"></section>
+	<section ng-include src="'views/education.html'"></section>
+	<section ng-include src="'views/career.html'"></section>
 	
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -42,21 +77,22 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
        <script src="scripts/app.js"></script>
 		<script src="scripts/controllers/SkillRatingCtrl.js"></script>
+		<script src="scripts/controllers/AboutCtrl.js"></script>
 		<script src="scripts/directive/directive.js"></script>
         <!-- endbuild -->
 		

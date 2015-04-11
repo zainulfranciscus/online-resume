@@ -1,31 +1,4 @@
-
-	<div class="row" >		
-		<div class="small-12 medium-10 columns">	
-			<h1 class="blue-font">About</h1>
-			<div>
-			I have been developing applications using Java for more than 10 years. I am able to do back-end and front-end development.
-			Within these 10 years I have had the opportunity to work with a number of different technologies.		
-			You may <a class="blue-font" id="see-skill-ratings" href="#" ng-click="displaySkillRatings()"> 
-			click here to see my confidence level with each of these technology.</a> Once you do that, the list might get very long. 
-			<a class="blue-font" id="hide-skill-ratings" href="#" ng-click="hideSkillRating()"> If it does, click here to hide it. </a>
-			</div>
-			<br/>
-			<div class="row">
-			
-				<div ng-class="isRatingDisplayed ? 'small-12 medium-4 columns left' : 'padding-left left'"  ng-repeat="skillCategory in skills">
-					<span ng-class="{'display-block row skill-name':isRatingDisplayed}" ng-repeat="category in skillCategory">
-							<span ng-class="isRatingDisplayed ? 'small-6 medium-4 columns' : 'skill-label'">{{category.name}}</span>
-							<span ng-class="{'small-6 medium-8 columns':isRatingDisplayed}">
-								<span class="step fi-star size-21 blue-font"  ng-repeat="rating in getNumber(category.rating) track by $index"></span>			
-							</span>
-							
-					</span>
-				</div>	
-			</div>
-		</div>
-	</div>
-	
-	<div ng-init="
+<div class="row"><div class="small-12 medium-10 columns"><h1 class="blue-font">About</h1><div> I have been developing applications using Java for more than 10 years. I am able to do back-end and front-end development. Within these 10 years I have had the opportunity to work with a number of different technologies. You may <a class="blue-font" id="see-skill-ratings" href="#" ng-click="displaySkillRatings()">click here to see my confidence level with each of these technology.</a> Once you do that, the list might get very long. <a class="blue-font" id="hide-skill-ratings" href="#" ng-click="hideSkillRating()">If it does, click here to hide it.</a></div><br/><div class="row"><div ng-class="isRatingDisplayed ? 'small-12 medium-4 columns left' : 'padding-left left'" ng-repeat="skillCategory in skills"> <span ng-class="{'display-block row skill-name':isRatingDisplayed}" ng-repeat="category in skillCategory"><span ng-class="isRatingDisplayed ? 'small-6 medium-4 columns' : 'skill-label'">{{category.name}}</span><span ng-class="{'small-6 medium-8 columns':isRatingDisplayed}"><span class="step fi-star size-21 blue-font" ng-repeat="rating in getNumber(category.rating) track by $index"></span></span></span></div></div></div></div><div ng-init="
 	skills=[
 	[{name:'Java', rating:5},
 	{name:'JQuery',rating:2},
@@ -60,5 +33,4 @@
 	{name:'AngularJS', rating:3},
 	{name:'GIT', rating:2}
 	]
-	];">
-	</div>
+	];"></div>

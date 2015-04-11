@@ -11,14 +11,12 @@ angular.module('resume')
   .controller('SkillRatingCtrl',['$scope',function ($scope) {
   
 	$scope.isRatingDisplayed = false;
-	$scope.contentOfAboutPage = "";
 	
 	$scope.scrollTo = function(whereToScroll){
 		$('html, body').animate({
             scrollTop: $(whereToScroll).offset().top - 207
         }, 1000);
 	};	
-	
 	
 	$scope.showRatingsStar = function() {
 		var selectorForARatingStar = '.fi-star';
@@ -42,9 +40,6 @@ angular.module('resume')
 		return new Array(number);
 	}
 	
-	$scope.displayAboutContent = function(aboutContentPageName){
-		$scope.contentOfAboutPage=aboutContentPageName;
-	}
 	
 	$scope.displaySkillRatings = function(){
 		$scope.isRatingDisplayed = !$scope.isRatingDisplayed;

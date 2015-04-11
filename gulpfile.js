@@ -39,12 +39,20 @@ var scss = { in: src + '/styles/*.scss',
 		   out: dest + '/styles'
 };
 
-var sass = require('gulp-sass');
-
+var sass = require('gulp-sass'),
+	pleeease = require('gulp-pleeease');
+	
 // compile Sass
 gulp.task('sass', function() {
 	return gulp.src(scss.in)
 		.pipe(sass(scss.sassOpts))
+		.pipe(pleeease({
+			autoprefixer: { browsers: ['last 2 versions', '> 2%'] },
+			rem: ['16px'],
+			pseudoElements: true,
+			mqpacker: true,
+			minifier: true
+		}))
 		.pipe(gulp.dest(scss.out));
 });
 
@@ -65,7 +73,8 @@ var del = require('del');
 //minify js
 var js = {	
 	in: src + 'scripts/**/*',
-	out: dest + 'scripts/'	
+	out: dest + 'scripts/',
+    bower: src + 'bower_components/**/*'	
 }
 
 gulp.task('minify-js',function(){
@@ -77,9 +86,10 @@ gulp.task('minify-js',function(){
 	gulp.src(js.in)
 		.pipe(uglify())
 		.pipe(gulp.dest(js.out));	
+	 
+    gulp.src(js.bower)
+        .pipe(gulp.dest(dest + "bower_components"));		
 })
-
-
 
 
 //test

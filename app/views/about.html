@@ -1,10 +1,12 @@
-<aside class='aside small-2 columns'>
-<header class="open-sans-font white-font large-font bold">ABOUT</header>
-<ul class="aside-list white-font">
-<li><a class="white-font" ng-click="displayAboutContent('views/gulp.html')">Gulp</a></li>
-<li><a ng-click="displayAboutContent('views/angular.html')">Angular</a></li>
-</ul>
-</aside>
-<section ng-include src="contentOfAboutPage"></section>
+<div ng-controller='AboutCtrl'>
+	<aside class='aside small-2 columns'>
+	<header class="large-font white-font bold">ABOUT</header>
+	<ul class="aside-list white-font">
+	<li><a  ng-click="displayContent('views/gulp.html')" class="white-font">Gulp</a></li>
+	<li><a  ng-click="displayContent('views/angular.html' )" class="white-font">Angular</a></li>
+	</ul>
+	</aside>
 
+	<section ng-include src="content"></section>
+</div>
 	

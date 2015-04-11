@@ -25,10 +25,13 @@
 
 .open-sans-font{	
 	font-family: 'Droid Sans', sans-serif !important;
+}
+	
+.standard-font-size{	
 	@include size-14();
 }
 @media only screen and (min-width: 40.063em) {
-	.open-sans-font{		
+	.standard-font-size{		
 		@include size-16();
 	}
 }

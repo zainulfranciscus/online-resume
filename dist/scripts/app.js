@@ -1,1 +1,1 @@
-"use strict";angular.module("resume",["ngAnimate","ngCookies","ngResource","ngRoute","ngSanitize","ngTouch"]).config(["$routeProvider",function(e){e.when("/",{templateUrl:"views/resume.html"}).when("/about",{templateUrl:"views/about.html"})}]);
+"use strict";angular.module("resume",["ngAnimate","ngCookies","ngResource","ngRoute","ngSanitize","ngTouch"]);

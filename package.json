@@ -35,6 +35,7 @@
     "gulp-jasmine": "~2.0.1",
     "gulp-protractor": "~1.0.0",
     "protractor": "~2.0.0",
-    "gulp-angular-protractor": "0.0.2"
+    "gulp-angular-protractor": "0.0.2",
+    "gulp-pleeease": "~1.2.0"
   }
 }
