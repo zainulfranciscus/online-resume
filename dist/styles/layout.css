@@ -1,3 +1,10 @@
+.aside {
+  background-color: #666;
+  padding-left: 30px; }
+
+.aside-list {
+  list-style-type: none; }
+
 .bottom-key-line {
   border-bottom: 1px solid #797979;
   line-height: 30px; }
@@ -59,4 +66,5 @@ dd {
 
 .skill-name {
   height: 30px;
-  margin-bottom: 18px !important; }
+  margin-bottom: 18px !important;
+  margin-right: 5px; }

@@ -1,0 +1,1 @@
+"use strict";angular.module("resume").controller("AboutCtrl",["$scope",function(t){var e="views/resume.html";t.content=e,t.displayContent=function(e){t.content=e}}]);

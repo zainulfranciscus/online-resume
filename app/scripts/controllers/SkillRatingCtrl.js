@@ -2,19 +2,23 @@
 
 /**
  * @ngdoc function
- * @name resume.controller:MainCtrl
+ * @name resume.controller:SkillRatingCtrl
  * @description
  * # MainCtrl
  * Controller of resume
  */
 angular.module('resume')
-  .controller('MainCtrl',['$scope',function ($scope) {
+  .controller('SkillRatingCtrl',['$scope',function ($scope) {
   
+	$scope.isRatingDisplayed = false;
+	$scope.contentOfAboutPage = "";
+	
 	$scope.scrollTo = function(whereToScroll){
 		$('html, body').animate({
             scrollTop: $(whereToScroll).offset().top - 207
         }, 1000);
 	};	
+	
 	
 	$scope.showRatingsStar = function() {
 		var selectorForARatingStar = '.fi-star';
@@ -25,7 +29,7 @@ angular.module('resume')
 			}
 		});
 	}
-	
+	 
 	$scope.hideRatingStar = function() {
 		$('.fi-star').stop();
 		$('.fi-star').hide();
@@ -38,23 +42,19 @@ angular.module('resume')
 		return new Array(number);
 	}
 	
+	$scope.displayAboutContent = function(aboutContentPageName){
+		$scope.contentOfAboutPage=aboutContentPageName;
+	}
+	
 	$scope.displaySkillRatings = function(){
 		$scope.isRatingDisplayed = !$scope.isRatingDisplayed;
-		$scope.textForButtonInSkillPage = "hide detail";
-		$scope.classForSkillAndRatingContainer = "display-block row";
-		$scope.classForSkillName ="small-6 medium-4 columns";
-		$scope.classForSkillRating = "small-6 medium-8 columns";
-		$scope.classForSkillAndRatingColumns="small-12 medium-4 columns";
+		
 		$scope.showRatingsStar();
 	}
 	
 	$scope.hideSkillRating = function() {
 		$scope.isRatingDisplayed = false;
-		$scope.textForButtonInSkillPage = "see detail";
-		$scope.classForSkillAndRatingContainer = "";
-		$scope.classForSkillName = $scope.label;
-		$scope.classForSkillRating = "";
-		$scope.classForSkillAndRatingColumns = $scope.paddingLeft;
+		
 		$scope.hideRatingStar();
 	}
 	
@@ -62,13 +62,5 @@ angular.module('resume')
 		$scope.isRatingDisplayed = true;
 	}
 	
-	$scope.paddingLeft = "padding-left";
-	$scope.label = "skill-label";
 	
-	$scope.isRatingDisplayed = false;
-	$scope.textForButtonInSkillPage = "see detail";
-	$scope.classForSkillAndRatingContainer = "";
-	$scope.classForSkillName = $scope.label;
-	$scope.classForSkillRating = "";
-	$scope.classForSkillAndRatingColumns=$scope.paddingLeft;
 }]);

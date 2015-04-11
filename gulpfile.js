@@ -50,12 +50,13 @@ gulp.task('sass', function() {
 
 var htmlclean = require('gulp-htmlclean');
 var html = {
-	in: src + "/index.html",
+	in: src + "/**/*.html",
 };
 
 // minify html
 gulp.task('html', function() {
 	return gulp.src(html.in).pipe(htmlclean()).pipe(gulp.dest(dest));
+	
 });
 
 var uglify = require('gulp-uglify');
@@ -108,8 +109,10 @@ gulp.task('default', ['html','sass','minify-js','test','dev'], function() {
 	
 	gulp.watch(scss.in, ['sass']);
 	
-	gulp.watch(js.in,['minify-js']);
+	gulp.watch(js.in,['minify-js','test']);
 	
 	gulp.watch(testFiles,['test'])
+	
+	
 
 });
