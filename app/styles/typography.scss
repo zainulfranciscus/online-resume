@@ -1,0 +1,63 @@
+// font-sizes
+// **************************************
+
+@mixin size-12() { font-size: 12px; }
+@mixin size-14() { font-size: 14px; }
+@mixin size-16() { font-size: 16px; }
+
+.size-12 {@include size-12();}
+      
+.size-14 {@include size-14();}
+
+.size-16 {@include size-16();}
+
+.size-18 { font-size: 18px; }
+
+.size-21 { font-size: 21px; }
+
+.size-24 { font-size: 24px; }
+
+.size-36 { font-size: 36px; }
+
+.large-font {
+	font-size:1.2em;	
+} 
+
+.open-sans-font{	
+	font-family: 'Droid Sans', sans-serif !important;
+	@include size-14();
+}
+@media only screen and (min-width: 40.063em) {
+	.open-sans-font{		
+		@include size-16();
+	}
+}
+.black-font {
+	color: #383838;
+}
+
+.blue-font{
+	color: #3399CC;
+}
+
+.white-font {
+	color: #ffffff;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+
+
+// Paragraph
+// **************************************
+.paragraph {
+	margin-bottom:20px;	
+}
+
+.small-paragraph {
+	margin-bottom:10px;
+}
+
+

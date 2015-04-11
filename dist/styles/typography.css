@@ -1,0 +1,49 @@
+.size-12 {
+  font-size: 12px; }
+
+.size-14 {
+  font-size: 14px; }
+
+.size-16 {
+  font-size: 16px; }
+
+.size-18 {
+  font-size: 18px; }
+
+.size-21 {
+  font-size: 21px; }
+
+.size-24 {
+  font-size: 24px; }
+
+.size-36 {
+  font-size: 36px; }
+
+.large-font {
+  font-size: 1.2em; }
+
+.open-sans-font {
+  font-family: 'Droid Sans', sans-serif !important;
+  font-size: 14px; }
+
+@media only screen and (min-width: 40.063em) {
+  .open-sans-font {
+    font-size: 16px; } }
+
+.black-font {
+  color: #383838; }
+
+.blue-font {
+  color: #3399CC; }
+
+.white-font {
+  color: #ffffff; }
+
+.bold {
+  font-weight: bold; }
+
+.paragraph {
+  margin-bottom: 20px; }
+
+.small-paragraph {
+  margin-bottom: 10px; }
